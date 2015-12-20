@@ -20,10 +20,18 @@ class HtmlOutPuter {
   	out_cont += "<table>";
   	this.datas.forEach(function (data) {
   		out_cont += "<tr>";
-  		out_cont += `<td>${ data.url }</td>`;
-  		out_cont += `<td>${ data.title }</td>`;
-  		out_cont += `<td>${ data.summary }</td>`;
+  		// out_cont += `<td>${ data.url }</td>`;
+  		out_cont += `<th>${ data.title }</th>`;
+  		// out_cont += `<td>${ data.summary }</td>`;
   		out_cont += "</tr>";
+
+  		out_cont += "<tr>";
+  		// out_cont += `<td>${ data.url }</td>`;
+  		// out_cont += `<td>${ data.title }</td>`;
+  		out_cont += `<td>${ data.summary.replace("\n","<br/>") }</td>`;
+  		out_cont += "</tr>";
+
+
   	});
   	out_cont += "</table>";
   	out_cont += "</body>";

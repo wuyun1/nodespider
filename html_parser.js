@@ -35,8 +35,10 @@ class HtmlParser {
 	res_data['url'] = page_url;
 	var title_node = $("dd.lemmaWgt-lemmaTitle-title>h1").eq(0);
 	res_data['title'] = title_node.text();
-	var summary_node = $("div.lemma-summary");
-	res_data['summary'] = summary_node.text();
+	var summary_node = $("div.lemma-summary>.para");
+	res_data['summary'] = summary_node.toArray().map(function (ele) {
+        return $(ele).text();
+      }).join("\n");
   	return res_data;
   }
   parse(page_url,html_cont){

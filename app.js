@@ -20,7 +20,7 @@ class SpiderMain {
 
 	  craw(root_url){
 	  	let self = this;
-	  	const lenn = 1000;
+	  	const lenn = 10000;
 	  	let count = 1;
 	  	let innercount = 1;
 	  	var isEND=false;
