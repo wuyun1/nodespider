@@ -1,0 +1,21 @@
+{
+  "name": "spider",
+  "description": "",
+  "main": "app.js",
+  "authors": [
+    "wuyun1 <842269153@qq.com>"
+  ],
+  "license": "ISC",
+  "moduleType": [
+    "es6",
+    "node"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
