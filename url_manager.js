@@ -14,6 +14,7 @@ class UrlManager {
       }
   	if(!this.isCrawed(new_url)&&!this.isExist(new_url)){
   		this.urls.push(new_url);
+             this["addNewUrl"]&&this["addNewUrl"]();
   	}  	
   }
   add_new_urls(urls){
@@ -41,6 +42,10 @@ class UrlManager {
    isExist(url){
   	return this.urls.indexOf(url)!==-1;
   }
+
+    on(strE,cb){
+      this[strE]=cb;
+    }
 
 }
 
